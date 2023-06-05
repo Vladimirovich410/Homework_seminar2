@@ -28,29 +28,52 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-Console.WriteLine("Введите число");
+// Console.WriteLine("Введите число");
+// int num = Convert.ToInt32(Console.ReadLine());
+// if(num < 100)
+// {
+//     Console.WriteLine("Третьей цифры нет");
+// }
+// else if((num > 99) && (num < 1000))
+// {
+//     int num1 = num % 10;
+//     Console.WriteLine(num1);
+// }
+// else if((num > 999) && (num < 10000))
+// {
+//     int num2 = (num / 10) % 10;
+//     Console.WriteLine(num2);
+// }
+// else if((num > 9999) && (num < 100000))
+// {
+//     int num3 = (num / 100) % 10;
+//     Console.WriteLine(num3);
+// }
+// else if((num > 99999) && (num < 1000000))
+// {
+//     int num4 = (num / 1000) % 10;
+//     Console.WriteLine(num4);
+// }
+
+
+// Задача 15: Напишите программу, которая принимает 
+// на вход цифру, обозначающую день недели, и проверяет, 
+// является ли этот день выходным.
+// 6 -> да
+// 7 -> да
+// 1 -> нет
+
+Console.WriteLine("Введите номер дня недели");
 int num = Convert.ToInt32(Console.ReadLine());
-if(num < 100)
+if((num < 1) || (num > 7))
 {
-    Console.WriteLine("Третьей цифры нет");
+    Console.WriteLine("Это не день недели");
 }
-else if((num > 99) && (num < 1000))
+else if(num < 6)
 {
-    int num1 = num % 10;
-    Console.WriteLine(num1);
+    Console.WriteLine("Это рабочий (будний) день");
 }
-else if((num > 999) && (num < 10000))
+else if((num == 6) || (num == 7))
 {
-    int num2 = (num / 10) % 10;
-    Console.WriteLine(num2);
-}
-else if((num > 9999) && (num < 100000))
-{
-    int num3 = (num / 100) % 10;
-    Console.WriteLine(num3);
-}
-else if((num > 99999) && (num < 1000000))
-{
-    int num4 = (num / 1000) % 10;
-    Console.WriteLine(num4);
+    Console.WriteLine("Ура! Выходной!");
 }
