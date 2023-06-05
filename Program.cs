@@ -10,7 +10,7 @@
 Console.WriteLine("Введите трёхзначное число");
 int num = Convert.ToInt32(Console.ReadLine());
 
-if(( num < 100) && (num > 1000))
+if(( num < 100) || (num > 1000))
 {
     Console.WriteLine("Это неверное число. Вернитесь в начало.");
 }
